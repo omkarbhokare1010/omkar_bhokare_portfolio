@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Omkar Rajendra Bhokare — Resume</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --normal-bg: #ffffff;
+      --normal-text: #0b1220;
+      --accent: #0d6efd;
+
+      /* Night mode colors */
+      --night-bg1: #0c0f18;
+      --night-bg2: #1a1f2e;
+      --night-text: #e5f2ff;
+      --night-accent: #00c3ff;
+      --night-border: rgba(0, 195, 255, 0.4);
+      --night-shadow: 0 0 25px rgba(0, 195, 255, 0.3);
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background: var(--normal-bg);
+      color: var(--normal-text);
+      padding: 26px;
+      line-height: 1.4;
+      transition: 0.3s ease all;
+    }
+
+    .page-wrap {
+      max-width: 900px;
+      margin: 10px auto;
+      padding: 28px;
+      background: var(--normal-bg);
+      border-radius: 10px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      transition: 0.3s ease all;
+    }
+
+    header {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #f8fafc, #eef2ff);
+      border: 1px solid rgba(15, 23, 42, 0.05);
+    }
+
+    .avatar h1 {
+      font-family: Orbitron, sans-serif;
+      margin: 0;
+      font-size: 20px;
+      color: var(--accent);
+    }
+
+    .head-right { flex: 1; }
+    .name { font-size: 22px; font-weight: 700; margin: 0; }
+    .contact { margin-top: 6px; font-size: 13px; color: rgba(0,0,0,0.65); }
+    .contact a { color: inherit; text-decoration: none; }
+
+    section { margin-top: 16px; }
+    h3 { margin: 0; font-size: 15px; color: var(--accent); font-weight: 700; }
+    .sub { font-size: 13px; margin-top: 6px; color: rgba(0,0,0,0.7); }
+    ul { margin: 8px 0 0 18px; padding: 0; }
+    li { margin: 6px 0; font-size: 14px; }
+
+    .projects .proj { margin-bottom: 10px; }
+    .muted { color: rgba(0,0,0,0.6); font-size: 13px; }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-ghost { background: transparent; border: 1px solid rgba(0,0,0,0.08); }
+    .btn-primary { background: var(--accent); color: white; }
+
+    /* Night Mode */
+    body.night {
+      background: linear-gradient(180deg, var(--night-bg1), var(--night-bg2));
+      color: var(--night-text);
+    }
+
+    body.night .page-wrap {
+      background: linear-gradient(180deg, #141a28, #101520);
+      border: 1px solid var(--night-border);
+      box-shadow: var(--night-shadow);
+    }
+
+    body.night .avatar {
+      background: linear-gradient(135deg, rgba(0,195,255,0.08), rgba(255,255,255,0.05));
+      border: 1px solid rgba(0,195,255,0.3);
+    }
+
+    body.night .avatar h1,
+    body.night .name,
+    body.night h3 { color: var(--night-accent); }
+
+    body.night .muted { color: rgba(255,255,255,0.7); }
+    body.night .contact { color: rgba(255,255,255,0.85); }
+    body.night .btn-ghost { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); }
+    body.night .btn-primary { background: var(--night-accent); color: #0c0f18; }
+    body.night .sub {
+    color: rgba(255, 255, 255, 0.9);
+    }
+
+
+    @media print {
+      body { padding: 0; }
+      .toolbar { display: none; }
+      .page-wrap { box-shadow: none; border: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button id="toggleBtn" class="btn btn-ghost">Switch to Night Mode</button>
+    <button id="downloadBtn" class="btn btn-primary">Download PDF</button>
+  </div>
+
+  <div id="resumeRoot" class="page-wrap" role="document">
+    <header>
+      <div class="avatar"><h1>OM</h1></div>
+      <div class="head-right">
+        <div class="name">Omkar Rajendra Bhokare</div>
+        <div class="contact">
+          <a href="mailto:omkarbhokare1010@gmail.com">omkarbhokare1010@gmail.com</a> &nbsp;|&nbsp;
+          +91-7757872897 &nbsp;|&nbsp;
+          <a href="https://github.com/omkarbhokare1010" target="_blank">github.com/omkarbhokare1010</a> &nbsp;|&nbsp;
+          <a href="https://www.linkedin.com/in/omkarbhokare1010/" target="_blank">linkedin.com/in/omkarbhokare1010</a> &nbsp;|&nbsp;
+          Pune, India
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h3>Professional Summary</h3>
+      <p class="sub">
+        Data-focused <strong>BCA student specializing in Cyber Security</strong> with strong analytical skills and hands-on experience in data manipulation, visualization, and insight generation. 
+        Proficient in <strong>Python, SQL, and Power BI</strong> for transforming raw data into actionable business intelligence. 
+        Seeking a <strong>Data Analyst internship</strong> to apply technical skills and contribute to data-driven decision-making.
+      </p>
+    </section>
+
+    <section>
+      <h3>Core Competencies</h3>
+      <ul>
+        <li>Data Cleaning</li>
+        <li>Data Visualization</li>
+        <li>Problem Solving & Analytical Thinking</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Tools & Technologies</h3>
+      <ul>
+        <li><strong>Languages:</strong> Python, SQL</li>
+        <li><strong>Libraries:</strong> Pandas, NumPy, Matplotlib</li>
+        <li><strong>Visualization Tools:</strong> Power BI, Excel (Advanced Formulas, Pivot Tables)</li>
+        <li><strong>Development Tools:</strong> Visual Studio Code</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h3>Projects</h3>
+      <div class="proj">
+        <strong>Trinetra Voice Assistant</strong> <span class="muted">— Python, VS Code</span>
+        <ul>
+          <li>Developed a voice-controlled assistant processing real-time audio commands with 85%+ accuracy.</li>
+          <li>Implemented fuzzy string matching for command recognition, reducing false negatives by 40%.</li>
+          <li>Automated application management and web browsing through voice commands.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <strong>Sales Data Analysis Dashboard</strong> <span class="muted">— Power BI, Excel</span>
+        <ul>
+          <li>Built an interactive dashboard analyzing sales performance across multiple regions.</li>
+          <li>Implemented KPIs for revenue growth, customer segmentation, and product performance.</li>
+          <li>Reduced manual reporting time by 60% through automated data visualization.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>Education</h3>
+      <p><strong>Bachelor of Computer Applications (Cyber Security)</strong> — Tilak Maharashtra Vidyapeeth, Pune (Aug 2023 – Aug 2025)</p>
+      <p><strong>12th (Science)</strong> — Tuljaram Chaturchand College, Baramati (2020 – 2022)</p>
+      <p><strong>10th (SSC)</strong> — SVPM English Medium School, Baramati (2019 – 2020)</p>
+    </section>
+
+    <section>
+      <h3>Additional Information</h3>
+      <ul>
+        <li>Passionate about data-driven problem solving and automation.</li>
+        <li>Strong interpersonal and teamwork skills.</li>
+        
+      </ul>
+    </section>
+  </div>
+  <a href="index.html" class="back-btn">← Back</a>
+
+<style>
+.back-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    background: #555;
+    transform: translateX(-3px);
+}
+</style>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('night');
+      toggleBtn.textContent = document.body.classList.contains('night')
+        ? 'Switch to Light Mode'
+        : 'Switch to Night Mode';
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      const element = document.getElementById('resumeRoot');
+      const filename = 'Omkar_Rajendra_Bhokare_Resume.pdf';
+      const opt = {
+        margin: [10, 8, 10, 8],
+        filename,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    });
+  </script>
+</body>
+</html>
